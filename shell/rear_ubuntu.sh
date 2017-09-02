@@ -1,8 +1,8 @@
-echo "Hello from $HOSTNAME at FOSDEM 2017"
+echo "Hello from $HOSTNAME at Cyberweek 2017"
 
 echo "$(date) - Adjusting Timezone ..."
-ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-echo "Europe/Brussels" > /etc/timezone
+ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+echo "Europe/Madrid" > /etc/timezone
 
 echo "$(date) - Refreshing repositories and installing missing required software for system integrity ..."
 apt-get update

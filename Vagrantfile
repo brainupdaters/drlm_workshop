@@ -11,7 +11,8 @@ nodes = [
 # DRLM servers
 
   { :hostname => 'drlm', :fport => 22250 , :ip => '10.100.0.50', :mac => '080027010050', :net => 'vboxnet1', :nic =>  2 , :box => 'minimal/xenial64', :ram => 512 , :script => 'shell/drlm_ubuntu.sh' },
-
+#  { :hostname => 'drlm', :fport => 22250 , :ip => '10.100.0.50', :mac => '080027010050', :net => 'vboxnet1', :nic =>  2 , :box => 'minimal/jessie64', :ram => 512 , :script => 'shell/drlm_debian.sh' },
+#  { :hostname => 'drlm', :fport => 22250 , :ip => '10.100.0.50', :mac => '080027010050', :net => 'vboxnet1', :nic =>  2 , :box => 'minimal/centos7', :ram => 512 , :script => 'shell/drlm_centos.sh' },
 ]
 
 # Deployment of the Workshop enviroment

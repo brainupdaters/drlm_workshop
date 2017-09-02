@@ -1,16 +1,16 @@
-echo "Hello from $HOSTNAME at FOSDEM 2017"
+echo "Hello from $HOSTNAME at Cyberweek 2017"
 
 echo "$(date) - Starting DRLM Provisioning ..."
 
 echo "$(date) - Adjusting Timezone ..."
-ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-echo "Europe/Brussels" > /etc/timezone
+ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+echo "Europe/Madrid" > /etc/timezone
 
 cd /
 echo "$(date) - Installing DRLM deps ..."
-sed -i "/ftp/s/.us./.be./g" /etc/apt/sources.list
+sed -i "/ftp/s/.us./.es./g" /etc/apt/sources.list
 apt-get update
-apt-get -y install openssh-client openssl wget gzip tar gawk sed grep coreutils util-linux nfs-kernel-server rpcbind isc-dhcp-server tftpd-hpa syslinux apache2 qemu-utils sqlite3
+apt-get -y install openssh-client openssl wget gzip tar gawk sed grep coreutils util-linux nfs-kernel-server rpcbind isc-dhcp-server tftpd-hpa syslinux apache2 qemu-utils sqlite3 bash-completion
 apt-get -y install lsb-release
 
 echo "$(date) - Installing Build deps ..."
@@ -19,7 +19,7 @@ apt-get -y install git build-essential debhelper
 echo "$(date) - Getting DRLM from source ..."
 git clone https://github.com/brainupdaters/drlm
 cd drlm
-git checkout -b master origin/master 
+git checkout -b release/2.2.0 origin/release/2.2.0
 
 echo "$(date) - Building DRLM (master branch) ..."
 make deb
