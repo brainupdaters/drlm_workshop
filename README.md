@@ -116,7 +116,7 @@ minimal/xenial64 (virtualbox, 16.04.1)
 $ git clone https://github.com/brainupdaters/cyberweek2017_workshop
 $ cd cyberweek2017_workshop
 ```
-#### Download ZIP file from github (https://github.com/brainupdaters/fosdem17_workshop/archive/master.zip)
+#### Download ZIP file from github (https://github.com/brainupdaters/cyberweek2017_workshop/archive/master.zip)
 1. Uncompress.
 2. Go to cyberweek2017_workshop folder.
 
