@@ -19,7 +19,7 @@ apt-get -y install git build-essential debhelper
 echo "$(date) - Getting DRLM from source ..."
 git clone https://github.com/brainupdaters/drlm
 cd drlm
-git checkout -b release/2.2.0 origin/release/2.2.0
+git checkout -b master origin/master
 
 echo "$(date) - Building DRLM (master branch) ..."
 make deb
@@ -40,6 +40,8 @@ echo "$(date) - Configuring HTTP service for DRLM ..."
 a2enmod ssl
 a2enmod rewrite
 a2enmod cgi
+a2enmod reqtimeout
+
 echo "# Include the DRLM Configuration:" | tee -a /etc/apache2/apache2.conf
 echo "Include /usr/share/drlm/conf/HTTP/https.conf" | tee -a /etc/apache2/apache2.conf
 rm -v /etc/apache2/sites-enabled/*
