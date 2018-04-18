@@ -1,4 +1,4 @@
-# Cyberweek 2017 Workshop
+# DRLM Workshop
 > Disaster Recovery Management with ReaR and DRLM (Workshop instructions)
 
 
@@ -113,12 +113,12 @@ minimal/xenial64 (virtualbox, 16.04.1)
 
 #### Using GIT:
 ```sh
-$ git clone https://github.com/brainupdaters/cyberweek2017_workshop
-$ cd cyberweek2017_workshop
+$ git clone https://github.com/brainupdaters/drlm_workshop
+$ cd drlm_workshop
 ```
-#### Download ZIP file from github (https://github.com/brainupdaters/cyberweek2017_workshop/archive/master.zip)
+#### Download ZIP file from github (https://github.com/brainupdaters/drlm_workshop/archive/master.zip)
 1. Uncompress.
-2. Go to cyberweek2017_workshop folder.
+2. Go to drlm_workshop folder.
 
 Now, we have all the requirements to prepare the workshop environment.
 
@@ -191,6 +191,8 @@ please remove added networks accordingly.
 
 ## Release History
 
+* 1.0.1
+    * CHANGE: Changes to make this a standard DRLM workshop to everyone interested in testing/learning ReaR & DRLM.
 * 1.0.0
     * The first proper release
     * CHANGE: Ready for the workshop at Cyberweek'17
