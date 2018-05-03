@@ -94,11 +94,11 @@ All boxes have the user "vagrant" with sudo privileges and password "vagrant".
 ### GNU/Linux, OS X & Windows:
 
 ```sh   
-$ vagrant box add https://atlas.hashicorp.com/minimal/boxes/centos7
+$ vagrant box add https://app.vagrantup.com/minimal/boxes/centos7
 
-$ vagrant box add https://atlas.hashicorp.com/minimal/boxes/jessie64
+$ vagrant box add https://app.vagrantup.com/minimal/boxes/jessie64
 
-$ vagrant box add https://atlas.hashicorp.com/minimal/boxes/xenial64
+$ vagrant box add https://app.vagrantup.com/minimal/boxes/xenial64
 ```
 ```sh
 $ vagrant box list
