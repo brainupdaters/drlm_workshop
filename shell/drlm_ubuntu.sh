@@ -7,8 +7,10 @@ ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 echo "Europe/Madrid" > /etc/timezone
 
 cd /
-echo "$(date) - Installing DRLM deps ..."
+echo "$(date) - Installing missing system software ..."
 apt-get update
+apt-get -y install lsb-release kbd lvm2
+echo "$(date) - Installing DRLM deps ..."
 apt-get -y install openssh-client openssl wget gzip tar gawk sed grep coreutils util-linux nfs-kernel-server rpcbind isc-dhcp-server tftpd-hpa syslinux apache2 qemu-utils sqlite3 bash-completion
 
 echo "$(date) - Installing Build deps ..."
@@ -52,9 +54,6 @@ systemctl restart rpcbind.service
 systemctl status rpcbind.service
 systemctl restart apache2.service
 systemctl status apache2.service
-
-echo "$(date) - Installing missing system software ..."
-apt-get -y install lsb-release kbd lvm2
 
 echo "$(date) - Rebooting system to apply changes ..."
 nohup reboot > /dev/null 2>&1 &
