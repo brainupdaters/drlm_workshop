@@ -161,7 +161,7 @@ just the VM's deployed with ```vagrant up``` will be destroyed.
 If you do not need those boxes anymore, you can remove them:
 
 ```sh
-$ vagrant box centos/7
+$ vagrant box remove centos/7
 Removing box 'centos/7' (v7.0) with provider 'virtualbox'...
 
 $ vagrant box remove debian/stretch64
