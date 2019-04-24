@@ -8,4 +8,8 @@ echo "$(date) - Refreshing repositories ..."
 sed -i "/ftp/s/.us./.es./g" /etc/apt/sources.list
 apt-get update
 
+echo "$(date) - Setting up SSH..."
+sed -ie '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+systemctl restart sshd.service
+
 echo "End of $HOSTNAME customization ..."

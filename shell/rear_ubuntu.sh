@@ -8,6 +8,10 @@ echo "$(date) - Refreshing repositories and installing missing required software
 apt-get update
 apt-get -y install kbd lvm2
 
+echo "$(date) - Setting up SSH..."
+sed -ie '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+systemctl restart sshd.service
+
 echo "$(date) - Rebooting system to apply changes ..."
 nohup reboot > /dev/null 2>&1 &
 

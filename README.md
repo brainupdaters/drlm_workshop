@@ -84,7 +84,7 @@ Now, we have all the requirements to prepare the workshop environment.
 ## Download all required vagrant boxes
 
 - CentOS 7
-- Debian 8
+- Debian 9
 - Ubuntu 16.04
 
 
@@ -94,17 +94,18 @@ All boxes have the user "vagrant" with sudo privileges and password "vagrant".
 ### GNU/Linux, OS X & Windows:
 
 ```sh   
-$ vagrant box add https://app.vagrantup.com/minimal/boxes/centos7
+$ vagrant box add https://app.vagrantup.com/debian/boxes/stretch64
 
-$ vagrant box add https://app.vagrantup.com/minimal/boxes/jessie64
+$ vagrant box add https://app.vagrantup.com/centos/boxes/7
 
-$ vagrant box add https://app.vagrantup.com/minimal/boxes/xenial64
+$ vagrant box add https://app.vagrantup.com/ubuntu/boxes/xenial64
+
 ```
 ```sh
 $ vagrant box list
-minimal/centos7  (virtualbox, 7.0)
-minimal/jessie64 (virtualbox, 8.0)
-minimal/xenial64 (virtualbox, 16.04.1)
+centos/7         (virtualbox, 1902.01)
+debian/stretch64 (virtualbox, 9.8.0)
+ubuntu/xenial64  (virtualbox, 20190419.0.0)
 ```
 
 ## Get the workshop from Github
@@ -160,14 +161,14 @@ just the VM's deployed with ```vagrant up``` will be destroyed.
 If you do not need those boxes anymore, you can remove them:
 
 ```sh
-$ vagrant box remove minimal/centos7
-Removing box 'minimal/centos7' (v7.0) with provider 'virtualbox'...
+$ vagrant box centos/7
+Removing box 'centos/7' (v7.0) with provider 'virtualbox'...
 
-$ vagrant box remove minimal/jessie64
-Removing box 'minimal/jessie64' (v8.0) with provider 'virtualbox'...
+$ vagrant box remove debian/stretch64
+Removing box 'debian/stretch64' (v8.0) with provider 'virtualbox'...
 
-$ vagrant box remove minimal/xenial64
-Removing box 'minimal/xenial64' (v16.04.1) with provider 'virtualbox'...
+$ vagrant box remove ubuntu/xenial64
+Removing box 'ubuntu/xenial64' (v16.04.1) with provider 'virtualbox'...
 ```
 As well, to clean up Virtualbox networks added for the workshop, do this:
 
@@ -191,6 +192,8 @@ please remove added networks accordingly.
 
 ## Release History
 
+* 1.1
+	* CHANGE: Updated new boxes and adjusted preparation scripts.
 * 1.0.1
     * CHANGE: Changes to make this a standard DRLM workshop to everyone interested in testing/learning ReaR & DRLM.
 * 1.0.0

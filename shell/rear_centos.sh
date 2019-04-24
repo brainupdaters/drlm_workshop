@@ -10,4 +10,11 @@ echo "$(date) - Refreshing repositories ..."
 yum clean all
 yum repolist
 
+echo "$(date) - Installing packages ..."
+yum install -y lvm2 dosfstools efibootmgr epel-release
+
+echo "$(date) - Setting up SSH..."
+sed -ie '/PasswordAuthentication/s/no/yes/g' /etc/ssh/sshd_config
+systemctl restart sshd.service
+
 echo "End of $HOSTNAME customization ..."
